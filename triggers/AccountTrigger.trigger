@@ -14,16 +14,15 @@ trigger AccountTrigger on Account ( after insert, after update, before insert, b
     if( (triggerControl == null) || ( (triggerControl != null) && (triggerControl.deactivate__c == false)) ) {   	    
           
 		// ## BEGIN: Actual Trigger Code --------------------------------------------------------------------------------
-			if(trigger.isBefore) {		
-				list<Account> accounts = trigger.new;
-		   		for (Account a : trigger.new){        	
-		            a.Description = 'The trigger is active';			
-				}
+		if(trigger.isBefore) {		
+			list<Account> accounts = trigger.new;
+	   		for (Account a : trigger.new){        	
+	            a.Description = 'The trigger is active';			
 			}
-			if(trigger.isAfter) {	
-				//TODO: trigger after
-			}
-			
+		}
+		if(trigger.isAfter) {	
+			//TODO: trigger after 
+		}			
 		// ## END: Actual Trigger Code	 --------------------------------------------------------------------------------
-	}
+	} 
 }
