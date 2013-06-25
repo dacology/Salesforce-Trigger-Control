@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<CustomObject xmlns="http://soap.sforce.com/2006/04/metadata">
+    <customSettingsType>List</customSettingsType>
+    <customSettingsVisibility>Public</customSettingsVisibility>
+    <description>Allows the control/deactivation of trigger activity, where this is embedded into the actual trigger</description>
+    <enableFeeds>false</enableFeeds>
+    <fields>
+        <fullName>deactivate__c</fullName>
+        <defaultValue>false</defaultValue>
+        <description>indicates that the trigger should not be active</description>
+        <externalId>false</externalId>
+        <label>deactivate</label>
+        <type>Checkbox</type>
+    </fields>
+    <label>CS_TriggerControl</label>
+</CustomObject>
